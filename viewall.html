@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All - Portfolio | Stopig</title>
+    <link rel="stylesheet" href="./assets/viewall.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <span>Stopig</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="interview.html">Interview</a>
+            <a href="viewall.html" class="btn-view active">View All</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <h1>Portfólio</h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="riseup">RiseUp</button>
+                <button class="filter-btn" data-filter="pessoal">Pessoal</button>
+            </div>
+        </section>
+
+        <!-- RiseUp Gallery -->
+        <section class="gallery active" id="riseup-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./assets/images/imagem6.jpg" alt="Design 1">
+                    <div class="overlay">
+                        <h3>Não finja ser alguém</h3>
+                        <p>RiseUp Design</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/images/imagem7.jpg" alt="Design 2">
+                    <div class="overlay">
+                        <h3>Um novo começo, mesma mensagem</h3>
+                        <p>RiseUp Typography</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pessoal Gallery -->
+        <section class="gallery" id="pessoal-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./assets/images/IMAGEM1.png" alt="Personal 1">
+                    <div class="overlay">
+                        <h3>No Way</h3>
+                        <p>Personal Photography</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/images/IMAGEM2.png" alt="Personal 2">
+                    <div class="overlay">
+                        <h3>No Way Frame</h3>
+                        <p>Personal Art</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stopig. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleries = document.querySelectorAll('.gallery');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Hide all galleries
+                galleries.forEach(gallery => gallery.classList.remove('active'));
+
+                // Show selected gallery
+                const filter = button.getAttribute('data-filter');
+                document.getElementById(`${filter}-gallery`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
