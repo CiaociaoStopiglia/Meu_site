@@ -65,9 +65,27 @@
             </div>
             <div class="feedback-content">
                 <h2>O que você achou sobre a entrevista? Deixe seu feedback!</h2>
-                <form class="feedback-form">
-                    <input type="email" placeholder="Email: seuemail@seuprovedor" required>
-                    <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
+
+                <!-- FORMULARIO FORMspree JÁ PRONTO -->
+                <form 
+                    class="feedback-form"
+                    action="https://formspree.io/f/xnnlznnz"
+                    method="POST"
+                >
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Email: seuemail@seuprovedor" 
+                        required
+                    >
+
+                    <textarea 
+                        name="message"
+                        placeholder="Sua mensagem..." 
+                        rows="5" 
+                        required
+                    ></textarea>
+
                     <button type="submit">Enviar</button>
                 </form>
             </div>
