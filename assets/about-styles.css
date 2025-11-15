@@ -424,3 +424,197 @@ footer {
         height: 120px;
     }
 }
+
+/* RESPONSIVIDADE REAL 👇 */
+
+/* ===== TABLETS E CELULARES GRANDES ===== */
+@media (max-width: 1000px) {
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    /* HERO */
+    .about-hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+        padding: 7rem 5% 4rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-shapes {
+        width: 100%;
+        height: 350px;
+    }
+
+    /* Reduzindo shapes para caber */
+    .shape-yellow-circle {
+        width: 250px;
+        height: 250px;
+        right: 15%;
+    }
+
+    .shape-red-square {
+        width: 180px;
+        height: 180px;
+        right: 40%;
+    }
+
+    .shape-green-rect {
+        height: 220px;
+        width: 130px;
+    }
+
+    /* Feedback */
+    .feedback {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feedback-form button {
+        align-self: center;
+    }
+}
+
+/* ===== CELULARES ===== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    /* HERO */
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-shapes {
+        height: 280px;
+    }
+
+    .shape-yellow-circle {
+        width: 160px;
+        height: 160px;
+        top: 10%;
+        right: 10%;
+    }
+
+    .shape-red-square {
+        width: 120px;
+        height: 120px;
+        bottom: 5%;
+    }
+
+    .shape-blue-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* CONTENT */
+    .content-wrapper {
+        max-width: 100%;
+    }
+
+    .content-wrapper p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    /* FEEDBACK */
+    .feedback {
+        padding: 4rem 5%;
+    }
+
+    .feedback-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .feedback-visual {
+        height: 260px;
+    }
+
+    .shape-purple {
+        width: 200px;
+        height: 200px;
+        right: 15%;
+    }
+
+    .shape-pink {
+        width: 130px;
+        height: 130px;
+        bottom: 5%;
+        left: 15%;
+    }
+}
+
+/* ===== CELULARES PEQUENOS ===== */
+@media (max-width: 500px) {
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .about-hero {
+        padding-top: 6rem;
+    }
+
+    .hero-shapes {
+        height: 230px;
+    }
+
+    /* Shapes super reduzidos */
+    .shape-yellow-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .shape-red-square {
+        width: 90px;
+        height: 90px;
+    }
+
+    .shape-purple {
+        width: 160px;
+        height: 160px;
+    }
+
+    .shape-cyan {
+        width: 90px;
+        height: 90px;
+    }
+
+    .feedback-form button {
+        width: 100%;
+    }
+}
